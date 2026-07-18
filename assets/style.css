@@ -443,6 +443,22 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
   justify-content: space-between;
 }
 
+/* ---------- Product brand lockups (marks & wordmarks from the product sites) ---------- */
+
+.product-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+.product-brand .pb-mark { flex: none; }
+.pb-mark--si { --mk-tile: #eef1f6; --mk-stroke: #e4e7ef; --mk-barA: #534ab7; --mk-barB: #94a3b8; }
+[data-theme="dark"] .pb-mark--si { --mk-tile: #141722; --mk-stroke: #21242f; --mk-barA: #6e7bff; --mk-barB: #a3a7b5; }
+.pb-name { font-size: 1.35rem; line-height: 1; }
+.pb-name--si { font-family: "Space Grotesk", var(--font-display); font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+.pb-name--si span { font-weight: 500; color: var(--ink-soft); }
+.pb-name--sk { font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
+
 /* ---------- CTA band ---------- */
 
 .cta-band { text-align: center; }
