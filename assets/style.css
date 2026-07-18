@@ -450,7 +450,20 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 0.9rem;
+  width: fit-content;
+  transition: transform 120ms ease;
 }
+a.product-brand { text-decoration: none; }
+a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
+.pb-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+  margin-right: 0.2rem;
+}
+.pb-num::after { content: "·"; margin-left: 0.6rem; }
 .product-brand .pb-mark { flex: none; }
 .pb-mark--si { --mk-tile: #eef1f6; --mk-stroke: #e4e7ef; --mk-barA: #534ab7; --mk-barB: #94a3b8; }
 [data-theme="dark"] .pb-mark--si { --mk-tile: #141722; --mk-stroke: #21242f; --mk-barA: #6e7bff; --mk-barB: #a3a7b5; }
