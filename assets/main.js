@@ -45,29 +45,10 @@
     observed.forEach(function (el) { el.classList.add("is-in"); });
   }
 
-  // Contact form → pre-filled email (no backend required)
-  var form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var get = function (id) {
-        var el = document.getElementById(id);
-        return el ? el.value.trim() : "";
-      };
-      var topic = get("cf-topic") || "General enquiry";
-      var subject = "[vantispi.com] " + topic + " — " + get("cf-name");
-      var body =
-        "Name: " + get("cf-name") + "\n" +
-        "Organisation: " + get("cf-org") + "\n" +
-        "Topic: " + topic + "\n\n" +
-        get("cf-message");
-      window.location.href =
-        "mailto:contact@vantispi.com?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-      var note = document.getElementById("cf-note");
-      if (note) note.hidden = false;
-    });
+  // Contact form success note (form posts to FormSubmit and returns with ?sent=1)
+  var note = document.getElementById("cf-note");
+  if (note && /[?&]sent=1/.test(location.search)) {
+    note.hidden = false;
+    note.scrollIntoView({ block: "center" });
   }
 })();
