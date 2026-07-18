@@ -57,7 +57,12 @@
 
   <section class="section" style="padding-top:2rem">
     <div class="wrap hero-grid" style="align-items:start">
-      <form id="contact-form" class="form-grid reveal" aria-label="Contact form">
+      <form id="contact-form" class="form-grid reveal" aria-label="Contact form" action="https://formsubmit.co/contact@vantispi.com" method="POST">
+        <input type="hidden" name="_subject" value="[vantispi.com] New enquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://vantispi.com/contact.html?sent=1">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label for="cf-name">Name
           <input id="cf-name" name="name" type="text" autocomplete="name" required>
         </label>
@@ -76,9 +81,9 @@
           <textarea id="cf-message" name="message" required placeholder="What are you working on, and where does it hurt?"></textarea>
         </label>
         <div>
-          <button class="btn btn--primary" type="submit">Compose email</button>
+          <button class="btn btn--primary" type="submit">Send message</button>
         </div>
-        <p id="cf-note" class="mono-note" hidden>This opens a pre-filled email in your mail app — your message travels directly to us, not through a web server. Fitting, we thought.</p>
+        <p id="cf-note" class="mono-note" hidden>MESSAGE SENT · We'll reply within one working day.</p>
       </form>
 
       <div class="def-list reveal">
