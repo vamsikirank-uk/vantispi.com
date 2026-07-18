@@ -41,13 +41,9 @@
       var topic = get("cf-topic") || "General enquiry";
       var subject = "[vantispi.com] " + topic + " — " + get("cf-name");
       var body =
-        "Name: " + get("cf-name") + "
-" +
-        "Organisation: " + get("cf-org") + "
-" +
-        "Topic: " + topic + "
-
-" +
+        "Name: " + get("cf-name") + "\n" +
+        "Organisation: " + get("cf-org") + "\n" +
+        "Topic: " + topic + "\n\n" +
         get("cf-message");
       window.location.href =
         "mailto:contact@vantispi.com?subject=" +
