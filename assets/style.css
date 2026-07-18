@@ -138,6 +138,10 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
 .logo { --arm1: #123a7a; --arm2: #2b7cf0; }
 .logo:hover { text-decoration: none; }
 .logo-mark { width: 27px; height: 27px; align-self: center; flex: none; }
+
+/* Official lockup artwork in header/footer (inline SVG — inherits Poppins + theme tokens) */
+.logo-lockup { height: 38px; width: auto; display: block; }
+.site-footer .logo-lockup { height: 33px; }
 .logo small {
   font-family: var(--font-display);
   font-weight: 600;
