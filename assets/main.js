@@ -1,5 +1,21 @@
 // Vantis PI — shared behaviour
 (function () {
+  // Theme toggle (boot script in <head> sets the initial data-theme before paint)
+  var root = document.documentElement;
+  var tbtn = document.querySelector(".theme-toggle");
+  var syncThemeIcon = function () {
+    if (tbtn) tbtn.textContent = root.getAttribute("data-theme") === "dark" ? "☼" : "☾";
+  };
+  if (tbtn) {
+    tbtn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("vpi-theme", next); } catch (e) {}
+      syncThemeIcon();
+    });
+    syncThemeIcon();
+  }
+
   // Mobile nav toggle
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
