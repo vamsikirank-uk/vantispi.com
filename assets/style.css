@@ -682,7 +682,7 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--line);
-  padding-block: 0.9rem;
+  padding-block: 0.7rem;
 }
 .product-tabs {
   display: inline-flex;
@@ -722,6 +722,7 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
   background: var(--blue-bright);
   box-shadow: 0 6px 20px color-mix(in srgb, var(--blue-bright) 32%, transparent);
 }
+.product-tabpanel { padding-top: clamp(1.35rem, 2.5vw, 2rem); }
 .product-tabpanel[hidden] { display: none; }
 .product-tabpanel:focus { outline: none; }
 @media (max-width: 560px) {
