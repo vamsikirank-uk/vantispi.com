@@ -51,4 +51,46 @@
     note.hidden = false;
     note.scrollIntoView({ block: "center" });
   }
+
+  // Product tabs (products page)
+  var tablist = document.querySelector(".product-tabs[role='tablist']");
+  if (tablist) {
+    var tabs = Array.prototype.slice.call(tablist.querySelectorAll("[role='tab']"));
+    var showReveals = function (panel) {
+      var rv = panel.querySelectorAll(".reveal");
+      for (var j = 0; j < rv.length; j++) { rv[j].classList.add("is-in"); }
+    };
+    var activate = function (tab, setFocus, updateHash) {
+      for (var k = 0; k < tabs.length; k++) {
+        var t = tabs[k], selected = t === tab;
+        t.setAttribute("aria-selected", selected ? "true" : "false");
+        if (selected) { t.removeAttribute("tabindex"); } else { t.setAttribute("tabindex", "-1"); }
+        var panel = document.getElementById(t.getAttribute("aria-controls"));
+        if (panel) {
+          if (selected) { panel.hidden = false; showReveals(panel); } else { panel.hidden = true; }
+        }
+      }
+      if (setFocus) tab.focus();
+      if (updateHash && history.replaceState) {
+        history.replaceState(null, "", "#" + tab.getAttribute("aria-controls"));
+      }
+    };
+    for (var i = 0; i < tabs.length; i++) {
+      (function (tab, i) {
+        tab.addEventListener("click", function () { activate(tab, false, true); });
+        tab.addEventListener("keydown", function (e) {
+          var idx = null;
+          if (e.key === "ArrowRight" || e.key === "ArrowDown") idx = (i + 1) % tabs.length;
+          else if (e.key === "ArrowLeft" || e.key === "ArrowUp") idx = (i - 1 + tabs.length) % tabs.length;
+          else if (e.key === "Home") idx = 0;
+          else if (e.key === "End") idx = tabs.length - 1;
+          if (idx !== null) { e.preventDefault(); activate(tabs[idx], true, true); }
+        });
+      })(tabs[i], i);
+    }
+    var initial = tabs[0];
+    var h = (location.hash || "").replace("#", "");
+    if (h) { for (var m = 0; m < tabs.length; m++) { if (tabs[m].getAttribute("aria-controls") === h) initial = tabs[m]; } }
+    activate(initial, false, false);
+  }
 })();

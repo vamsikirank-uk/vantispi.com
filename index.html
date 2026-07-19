@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f4f6fa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b1524" media="(prefers-color-scheme: dark)">
   <title>Vantis Project Intelligence — Project controls software &amp; consultancy, in the browser</title>
-  <meta name="description" content="Vantis PI builds browser-based planning and project controls software — ScheduleInsight for schedule analysis, Sketchdule for board-ready one-pagers, roadmaps and swim-lanes. Free to try; your data never leaves your device.">
+  <meta name="description" content="Vantis PI builds browser-based planning and project controls software — ScheduleInsight for schedule analysis, Sketchdule for board-ready one-pagers, roadmaps and swim-lanes, and RunMonteCarlo for QSRA risk analysis. Free to try; your data never leaves your device.">
   <link rel="canonical" href="https://vantispi.com/">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -30,7 +30,7 @@
     "name": "Vantis Project Intelligence",
     "url": "https://vantispi.com",
     "description": "UK company delivering browser-based project controls software for infrastructure, construction, oil & gas and defence.",
-    "sameAs": ["https://scheduleinsight.co.uk", "https://sketchdule.com"]
+    "sameAs": ["https://scheduleinsight.co.uk", "https://sketchdule.com", "https://runmontecarlo.com"]
   }
   </script>
 </head>
@@ -147,7 +147,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">VPI-1020 · The products</p>
-        <h2>Two instruments. One principle: your data stays yours.</h2>
+        <h2>Three instruments. One principle: your data stays yours.</h2>
         <p>Open either one in the tab you already have — no install, no sign-up, no procurement battle. The first result usually lands before the kettle boils.</p>
       </div>
 
@@ -236,6 +236,56 @@
           </svg>
         </figure>
       </article>
+
+      <article class="product-panel">
+        <div class="reveal">
+          <a class="product-brand" href="https://runmontecarlo.com" rel="noopener" aria-label="Open RunMonteCarlo"><svg class="pb-mark" width="27" height="27" viewBox="0 0 40 40" aria-hidden="true"><rect x="6.5" y="23" width="5" height="10" rx="2.2" fill="#37E2C5"/><rect x="13.5" y="16.5" width="5" height="16.5" rx="2.2" fill="#6E7BFF"/><rect x="20.5" y="11.5" width="5" height="21.5" rx="2.2" fill="#6E7BFF"/><rect x="27.5" y="19" width="5" height="14" rx="2.2" fill="#7EE2A8"/><circle cx="23" cy="8" r="2.7" fill="#F6B33D"/></svg><span class="pb-name pb-name--rmc">Run<span>MonteCarlo</span></span></a>
+          <p class="product-kicker">runmontecarlo.com</p>
+          <h3>From risk register to P80, in the browser.</h3>
+          <p class="desc">Build or paste a risk register, set 3-point duration and cost ranges, and run a seeded Monte Carlo on your P6 or MS Project schedule — P50 / P80 / P90 dates and costs, tornado charts and a formal QSRA/QCRA report pack. Your risk data never leaves your device.</p>
+          <ul class="feature-list">
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Risk register</strong> — cause / event / effect, threats &amp; opportunities, heat map</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Smart-paste</strong> — build a register from your Excel sheet in minutes</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>3-point ranges</strong> — Triangular, PERT, Normal, Lognormal, Discrete</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Seeded Monte Carlo</strong> — P50 / P80 / P90 dates &amp; costs, up to 50k iterations</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Tornado &amp; S-curves</strong> — risk drivers ranked in Δdays / Δ£ at P80</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Reproducible reports</strong> — seed &amp; input hashes in every QSRA pack</span></li>
+          </ul>
+          <div class="product-ctas">
+            <a class="btn btn--primary" href="https://runmontecarlo.com" rel="noopener">Open RunMonteCarlo</a>
+            <a class="btn btn--ghost" href="products.html#runmontecarlo">Learn more</a>
+          </div>
+        </div>
+        <figure class="product-media reveal" role="img" aria-label="Stylised Monte Carlo finish-date forecast: a histogram overlaid with a cumulative S-curve and P50 and P80 confidence markers.">
+          <figcaption aria-hidden="true"><span>MONTE CARLO · FINISH FORECAST</span><span>P80</span></figcaption>
+          <svg viewBox="0 0 480 260" fill="none" aria-hidden="true">
+            <g stroke="var(--fig-grid)" stroke-width="1">
+              <line x1="44" y1="18" x2="44" y2="214"/><line x1="44" y1="214" x2="462" y2="214"/>
+            </g>
+            <g fill="var(--fig-bar)">
+              <rect x="56" y="198" width="22" height="16" rx="2"/>
+              <rect x="82" y="180" width="22" height="34" rx="2"/>
+              <rect x="108" y="150" width="22" height="64" rx="2"/>
+              <rect x="134" y="110" width="22" height="104" rx="2"/>
+              <rect x="160" y="86" width="22" height="128" rx="2"/>
+              <rect x="186" y="102" width="22" height="112" rx="2"/>
+              <rect x="212" y="130" width="22" height="84" rx="2"/>
+              <rect x="238" y="156" width="22" height="58" rx="2"/>
+              <rect x="264" y="178" width="22" height="36" rx="2"/>
+              <rect x="290" y="192" width="22" height="22" rx="2"/>
+              <rect x="316" y="202" width="22" height="12" rx="2"/>
+            </g>
+            <path d="M52 212 C110 210 130 206 150 188 C172 168 190 120 214 92 C245 56 300 40 360 34 L452 32" stroke="var(--fig-accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="178" y1="214" x2="178" y2="150" stroke="var(--fig-label)" stroke-width="1.25" stroke-dasharray="4 3"/>
+            <circle cx="178" cy="150" r="3.5" fill="var(--fig-label)"/>
+            <text x="178" y="142" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--fig-label)">P50</text>
+            <line x1="230" y1="214" x2="230" y2="78" stroke="#f6b33d" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="230" cy="78" r="4" fill="#f6b33d"/>
+            <text x="230" y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#f6b33d">P80</text>
+            <text x="462" y="234" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--fig-accent)">P80 FINISH · 14-MAR-27</text>
+          </svg>
+        </figure>
+      </article>
     </div>
   </section>
 
@@ -270,7 +320,7 @@
     <div class="wrap reveal">
       <p class="eyebrow" style="justify-content:center">VPI-1040 · Next activity</p>
       <h2>Put your programme through its paces.</h2>
-      <p>Both products are free to try, right now, in the tab you already have open. Or tell us about your programme and we'll tell you honestly whether we can help.</p>
+      <p>All three products are free to try, right now, in the tab you already have open. Or tell us about your programme and we'll tell you honestly whether we can help.</p>
       <div class="hero-ctas">
         <a class="btn btn--primary" href="products.html">Try the products</a>
         <a class="btn btn--ghost" href="contact.html">Book a conversation</a>
@@ -292,6 +342,7 @@
         <ul>
           <li><a href="https://scheduleinsight.co.uk" rel="noopener">ScheduleInsight</a></li>
           <li><a href="https://sketchdule.com" rel="noopener">Sketchdule</a></li>
+          <li><a href="https://runmontecarlo.com" rel="noopener">RunMonteCarlo</a></li>
           <li><a href="products.html">Compare</a></li>
         </ul>
       </div>

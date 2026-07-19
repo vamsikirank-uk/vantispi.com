@@ -1,14 +1,14 @@
 # vantispi.com
 
 Company website for **Vantis Project Intelligence** — browser-based project controls
-software (ScheduleInsight, Sketchdule) and expert consultancy.
+software (ScheduleInsight, Sketchdule, RunMonteCarlo) and expert consultancy.
 
 Hand-crafted static site: no build step, no dependencies. The folder deploys as-is.
 
 ## Structure
 
     index.html          Home
-    products.html       ScheduleInsight & Sketchdule deep dives
+    products.html       ScheduleInsight, Sketchdule & RunMonteCarlo deep dives
     consultancy.html    Services, engagement models, sectors
     about.html          Story, privacy architecture, principles
     contact.html        Contact form (opens a pre-filled email) + details
@@ -34,5 +34,5 @@ in GoDaddy. GitHub Pages also works if the repo is made public.
 
 - Swap the mailto contact form for Formspree/Basin (one attribute change).
 - Add /insights/ articles for SEO.
-- Ask scheduleinsight.co.uk and sketchdule.com to footer-link back here
+- Ask scheduleinsight.co.uk, sketchdule.com and runmontecarlo.com to footer-link back here
   ("A Vantis Project Intelligence product") — the biggest early SEO win.

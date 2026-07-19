@@ -6,16 +6,16 @@
   <script>(function(){try{var t=localStorage.getItem("vpi-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <meta name="theme-color" content="#f4f6fa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b1524" media="(prefers-color-scheme: dark)">
-  <title>Products — ScheduleInsight &amp; Sketchdule | Vantis Project Intelligence</title>
-  <meta name="description" content="ScheduleInsight: DCMA 14-point checks, critical path and delay analysis, Earned Schedule and Monte Carlo QSRA for P6 XER and MS Project files. Sketchdule: board-ready summary schedules in minutes. Both run entirely in your browser.">
+  <title>Products — ScheduleInsight, Sketchdule &amp; RunMonteCarlo | Vantis Project Intelligence</title>
+  <meta name="description" content="ScheduleInsight: DCMA 14-point checks, critical path and delay analysis, Earned Schedule and Monte Carlo QSRA for P6 XER and MS Project files. Sketchdule: board-ready summary schedules in minutes. RunMonteCarlo: browser-native QSRA/QCRA risk analysis with P50/P80/P90 dates and costs. All run entirely in your browser.">
   <link rel="canonical" href="https://vantispi.com/products.html">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon-180.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Vantis Project Intelligence">
-  <meta property="og:title" content="Products — ScheduleInsight &amp; Sketchdule">
-  <meta property="og:description" content="Professional-grade schedule analysis and board-ready summary schedules — no installation, and your programme data never leaves your device.">
+  <meta property="og:title" content="Products — ScheduleInsight, Sketchdule &amp; RunMonteCarlo">
+  <meta property="og:description" content="Professional-grade schedule analysis, board-ready summary schedules and browser-native QSRA risk analysis — no installation, and your programme data never leaves your device.">
   <meta property="og:url" content="https://vantispi.com/products.html">
   <meta property="og:image" content="https://vantispi.com/assets/brand/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +42,16 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web browser",
       "description": "Turns a dense Primavera P6, MS Project or Asta programme into a board-ready summary schedule in minutes, with Office-style editing, PDF/PowerPoint export and end-to-end encrypted co-editing.",
+      "publisher": { "@type": "Organization", "name": "Vantis Project Intelligence", "url": "https://vantispi.com" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RunMonteCarlo",
+      "url": "https://runmontecarlo.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web browser",
+      "description": "Browser-native QSRA/QCRA and risk register for Primavera P6 and MS Project schedules: build or smart-paste a risk register, set 3-point duration and cost ranges, and run a seeded Monte Carlo simulation for P50/P80/P90 dates and costs, tornado charts and a reproducible QSRA report pack — entirely client-side, so your risk data never leaves your device.",
       "publisher": { "@type": "Organization", "name": "Vantis Project Intelligence", "url": "https://vantispi.com" }
     }
   ]
@@ -74,12 +84,23 @@
         <span class="line-mask"><span>Professional-grade tools,</span></span>
         <span class="line-mask"><span><em class="accent-sweep" style="font-style:normal">zero-install.</em></span></span>
       </h1>
-      <p class="lede rise rise-1">Both products run entirely in your browser. Nothing to deploy, nothing to approve, and your programme files are never uploaded — analysis happens on your device, full stop.</p>
+      <p class="lede rise rise-1">All three products run entirely in your browser. Nothing to deploy, nothing to approve, and your programme files are never uploaded — analysis happens on your device, full stop.</p>
     </div>
   </section>
 
+  <!-- Product tabs -->
+  <div class="product-tabs-bar">
+    <div class="wrap">
+      <div class="product-tabs" role="tablist" aria-label="Choose a product">
+        <button class="ptab" role="tab" id="ptab-si" aria-controls="scheduleinsight" aria-selected="true"><span class="ptab-num">01</span> ScheduleInsight</button>
+        <button class="ptab" role="tab" id="ptab-sk" aria-controls="sketchdule" aria-selected="false" tabindex="-1"><span class="ptab-num">02</span> Sketchdule</button>
+        <button class="ptab" role="tab" id="ptab-rmc" aria-controls="runmontecarlo" aria-selected="false" tabindex="-1"><span class="ptab-num">03</span> RunMonteCarlo</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ScheduleInsight -->
-  <section class="section" id="scheduleinsight">
+  <section class="section product-tabpanel" id="scheduleinsight" role="tabpanel" aria-labelledby="ptab-si" tabindex="0">
     <div class="wrap">
       <article class="product-panel product-panel--light" style="padding-top:0">
         <div class="reveal">
@@ -130,7 +151,7 @@
   </section>
 
   <!-- Sketchdule -->
-  <section class="section on-dark" id="sketchdule">
+  <section class="section product-tabpanel" id="sketchdule" role="tabpanel" aria-labelledby="ptab-sk" tabindex="0" hidden>
     <div class="wrap">
       <article class="product-panel" style="padding-top:0">
         <div class="reveal">
@@ -178,12 +199,65 @@
     </div>
   </section>
 
+  <!-- RunMonteCarlo -->
+  <section class="section product-tabpanel" id="runmontecarlo" role="tabpanel" aria-labelledby="ptab-rmc" tabindex="0" hidden>
+    <div class="wrap">
+      <article class="product-panel product-panel--light" style="padding-top:0">
+        <div class="reveal">
+          <a class="product-brand" href="https://runmontecarlo.com" rel="noopener" aria-label="03 — Open RunMonteCarlo"><span class="pb-num">03</span><svg class="pb-mark" width="27" height="27" viewBox="0 0 40 40" aria-hidden="true"><rect x="6.5" y="23" width="5" height="10" rx="2.2" fill="#37E2C5"/><rect x="13.5" y="16.5" width="5" height="16.5" rx="2.2" fill="#6E7BFF"/><rect x="20.5" y="11.5" width="5" height="21.5" rx="2.2" fill="#6E7BFF"/><rect x="27.5" y="19" width="5" height="14" rx="2.2" fill="#7EE2A8"/><circle cx="23" cy="8" r="2.7" fill="#F6B33D"/></svg><span class="pb-name pb-name--rmc">Run<span>MonteCarlo</span></span></a>
+          <h2>Schedule &amp; cost risk analysis — QSRA in the browser</h2>
+          <p class="desc">For Primavera P6 and MS Project schedules. Build or paste a risk register, set 3-point duration and cost ranges, and run a seeded Monte Carlo simulation — P50 / P80 / P90 dates and costs, tornado charts, and a formal QSRA/QCRA report pack. Your risk register never leaves your device.</p>
+          <ul class="feature-list">
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Risk register</strong> — cause / event / effect, threat &amp; opportunity, 5×5 heat map and editable RBS</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Smart-paste import</strong> — map an existing Excel register in seconds; CSV / XLSX round-trip</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>3-point ranges</strong> — Triangular, PERT, Normal, Lognormal and Discrete, with rule-based ranging</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Seeded Monte Carlo</strong> — P50 / P80 / P90 dates and costs; up to 50,000 iterations</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>S-curves &amp; tornados</strong> — risk drivers ranked in Δdays / Δ£ at P80, plus criticality index</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Schedule Fitness Gate</strong> — a DCMA readiness check before you simulate, powered by ScheduleInsight</span></li>
+            <li><span class="diamond" aria-hidden="true"></span><span><strong>Reproducible report pack</strong> — seed and input hashes printed in every QSRA/QCRA report</span></li>
+          </ul>
+          <p class="mono-note" style="margin-top:1.2rem">FOR · risk managers · project controls leads · QSRA/QCRA consultants · owner PMOs</p>
+          <div class="product-ctas">
+            <a class="btn btn--primary" href="https://runmontecarlo.com" rel="noopener">Open RunMonteCarlo →</a>
+          </div>
+        </div>
+        <figure class="product-media reveal" role="img" aria-label="Stylised tornado chart ranking risk drivers by their impact on the P80 finish, with threats extending right and an opportunity extending left.">
+          <figcaption aria-hidden="true"><span>TORNADO · RISK DRIVERS</span><span>Δ P80</span></figcaption>
+          <svg viewBox="0 0 480 260" fill="none" aria-hidden="true">
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--fig-label)">
+              <text x="18" y="48">R-014</text><text x="18" y="80">R-007</text>
+              <text x="18" y="112">WX-02</text><text x="18" y="144">R-022</text>
+              <text x="18" y="176">R-003</text><text x="18" y="208">OPP-06</text>
+            </g>
+            <text x="196" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--fig-label)">P80 IMPACT</text>
+            <line x1="196" y1="24" x2="196" y2="214" stroke="var(--fig-grid)" stroke-width="1"/>
+            <g>
+              <rect x="196" y="36" width="210" height="16" rx="2" fill="#d6453d"/>
+              <rect x="196" y="68" width="158" height="16" rx="2" fill="var(--fig-accent)"/>
+              <rect x="196" y="100" width="120" height="16" rx="2" fill="var(--fig-accent)"/>
+              <rect x="196" y="132" width="78" height="16" rx="2" fill="var(--fig-accent)"/>
+              <rect x="196" y="164" width="44" height="16" rx="2" fill="var(--fig-accent)"/>
+              <rect x="138" y="196" width="58" height="16" rx="2" fill="#f6b33d"/>
+            </g>
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--fig-label)">
+              <text x="412" y="48">+18d</text><text x="360" y="80">+13d</text>
+              <text x="322" y="112">+9d</text><text x="280" y="144">+6d</text>
+              <text x="246" y="176">+3d</text>
+              <text x="132" y="208" text-anchor="end" fill="#f6b33d">−4d</text>
+            </g>
+            <text x="462" y="234" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--fig-accent)">THREATS ▸ · ◂ OPPORTUNITIES</text>
+          </svg>
+        </figure>
+      </article>
+    </div>
+  </section>
+
   <!-- Which one -->
   <section class="section">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">VPI-2030 · Which one do I need?</p>
-        <h2>Analyse it, or communicate it?</h2>
+        <h2>Analyse it, communicate it, or quantify the risk?</h2>
       </div>
       <div class="grid-3">
         <div class="card reveal">
@@ -195,10 +269,11 @@
           <p>Turning the detail into a one-page summary a project board can absorb in ninety seconds — that's <strong>Sketchdule</strong>.</p>
         </div>
         <div class="card reveal">
-          <h3><span class="diamond diamond--amber" aria-hidden="true"></span>Running a programme</h3>
-          <p>Most teams do both every reporting cycle. The products share one principle: your data stays on your device.</p>
+          <h3><span class="diamond diamond--amber" aria-hidden="true"></span>Quantifying the risk</h3>
+          <p>Turning the register and ranges into defensible P50 / P80 / P90 dates and costs the client will accept — that's <strong>RunMonteCarlo</strong>.</p>
         </div>
       </div>
+      <p class="mono-note center" style="margin-top:1.75rem">Most teams reach for all three every reporting cycle. They share one principle: your data stays on your device.</p>
     </div>
   </section>
 
@@ -206,10 +281,11 @@
   <section class="section on-dark cta-band">
     <div class="wrap reveal">
       <h2>Free to try. Nothing to install.</h2>
-      <p>Open either product and load a real programme — the first analysis costs you nothing but the tab.</p>
+      <p>Open any product and load a real programme — the first analysis costs you nothing but the tab.</p>
       <div class="hero-ctas">
         <a class="btn btn--primary" href="https://scheduleinsight.co.uk" rel="noopener">ScheduleInsight</a>
         <a class="btn btn--primary" href="https://sketchdule.com" rel="noopener">Sketchdule</a>
+        <a class="btn btn--primary" href="https://runmontecarlo.com" rel="noopener">RunMonteCarlo</a>
         <a class="btn btn--ghost" href="contact.html">Ask us which fits</a>
       </div>
     </div>
@@ -229,6 +305,7 @@
         <ul>
           <li><a href="https://scheduleinsight.co.uk" rel="noopener">ScheduleInsight</a></li>
           <li><a href="https://sketchdule.com" rel="noopener">Sketchdule</a></li>
+          <li><a href="https://runmontecarlo.com" rel="noopener">RunMonteCarlo</a></li>
           <li><a href="products.html">Compare</a></li>
         </ul>
       </div>
