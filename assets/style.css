@@ -735,3 +735,16 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
   .product-tabs { width: 100%; }
   .ptab { flex: 1 1 0; justify-content: center; padding-inline: 0.7rem; }
 }
+
+/* Aimavera / Tidiplan product figures */
+.anim-bar { transform-box: fill-box; transform-origin: left center; transform: scaleX(0); }
+.is-in .anim-bar { animation: bar-in 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms) forwards; }
+.anim-line { stroke-dasharray: var(--len, 400); stroke-dashoffset: var(--len, 400); }
+.is-in .anim-line { animation: dash-in 1100ms ease-out var(--d, 0ms) forwards; }
+.is-in .anim-pulse { animation: fig-pulse 2.2s ease-in-out 1.6s infinite; }
+@keyframes fig-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@media (prefers-reduced-motion: reduce) {
+  .anim-bar { transform: none; animation: none !important; }
+  .anim-line { stroke-dashoffset: 0; animation: none !important; }
+  .anim-pulse { animation: none !important; }
+}
