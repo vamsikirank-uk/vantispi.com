@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;800&family=Space+Grotesk:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=6">
+  <link rel="stylesheet" href="assets/style.css?v=7">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -303,28 +303,103 @@
             <a class="btn btn--ghost" href="products.html#aimavera">Learn more</a>
           </div>
         </div>
-        <figure class="product-media reveal" role="img" aria-label="Stylised schedule editor: Gantt bars with a red critical path and a data-date line, and an AI assistant prompt that moves an activity and recalculates the critical path.">
-          <figcaption aria-hidden="true"><span>AIMAVERA · LIVE CRITICAL PATH</span><span>XER</span></figcaption>
-          <svg viewBox="0 0 480 260" fill="none" aria-hidden="true">
-            <g stroke="var(--fig-grid)" stroke-width="1">
-              <line x1="100" y1="16" x2="100" y2="200"/><line x1="190" y1="16" x2="190" y2="200"/>
-              <line x1="280" y1="16" x2="280" y2="200"/><line x1="370" y1="16" x2="370" y2="200"/><line x1="460" y1="16" x2="460" y2="200"/>
-            </g>
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--fig-label)">
-              <text x="18" y="38">A1010</text><text x="18" y="76">A1020</text><text x="18" y="114">A1030</text><text x="18" y="152">A1040</text><text x="18" y="190">FIN</text>
-            </g>
-            <rect class="anim-bar" style="--d:0ms" x="100" y="26" width="110" height="14" rx="3" fill="#d6453d"/>
-            <rect class="anim-bar" style="--d:250ms" x="210" y="64" width="120" height="14" rx="3" fill="#d6453d"/>
-            <rect class="anim-bar" style="--d:500ms" x="140" y="102" width="100" height="14" rx="3" fill="var(--fig-bar)"/>
-            <rect class="anim-bar" style="--d:750ms" x="330" y="140" width="110" height="14" rx="3" fill="#d6453d"/>
-            <path class="anim-line" style="--len:260;--d:900ms" d="M210 40 V71 H210 M330 78 V147 H330" stroke="#d6453d" stroke-width="1.5" stroke-dasharray="260"/>
-            <rect class="anim-pulse" x="438" y="178" width="13" height="13" transform="rotate(45 444.5 184.5)" fill="#d6453d"/>
-            <line class="anim-pulse" x1="150" y1="16" x2="150" y2="200" stroke="#2fb67c" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <text x="154" y="12" font-family="JetBrains Mono, monospace" font-size="9" fill="#2fb67c">DATA DATE</text>
-            <rect x="14" y="214" width="452" height="34" rx="6" fill="var(--fig-fill)"/>
-            <text x="26" y="235" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--fig-accent)">AI ▸ “slip A1020 by 5d” → critical path recalculated · FIN +5d</text>
-          </svg>
-        </figure>
+        <div class="am-demo" id="amDemo">
+  <div class="demo2">
+    <div class="plot rv" id="plotCard">
+      <div class="bar-head">
+        <svg width="16" height="16" viewBox="0 0 1024 1024" aria-hidden="true">
+          <rect width="1024" height="1024" rx="230" fill="var(--a-acc)"/>
+          <rect x="193.2" y="286.4" width="568.5" height="568.5" rx="185.4" fill="none" stroke="var(--a-paper)" stroke-width="148.3"/>
+          <rect x="761.6" y="286.4" width="143.4" height="630.3" rx="71.7" fill="var(--a-paper)"/>
+          <polygon points="833.3,95 913,174.7 833.3,254.4 753.6,174.7" fill="#E5604A"/>
+          <rect x="309.3" y="437.2" width="259.5" height="123.6" rx="61.8" fill="var(--a-paper)"/>
+        </svg>
+        substation-42.xer
+        <span class="grow"></span>
+        <button id="revealReplay" type="button" title="Play the sequence again" hidden>replay ↺</button>
+      </div>
+      <svg viewBox="0 0 608 432" aria-label="A schedule the AI edits live: pushing procurement extends its remaining work from the data date and moves the downstream bars and milestone; then overlapping installation with delivery on paired start-to-start and finish-to-finish links recovers the slip and returns the handover milestone to its contract date">
+        <g style="stroke: var(--a-grid);">
+          <line x1="0" y1="48" x2="608" y2="48"/><line x1="0" y1="96" x2="608" y2="96"/>
+          <line x1="0" y1="144" x2="608" y2="144"/><line x1="0" y1="192" x2="608" y2="192"/>
+          <line x1="0" y1="240" x2="608" y2="240"/><line x1="0" y1="288" x2="608" y2="288"/>
+          <line x1="0" y1="336" x2="608" y2="336"/><line x1="0" y1="384" x2="608" y2="384"/>
+        </g>
+        <g style="stroke: var(--a-rule);">
+          <line x1="152" y1="0" x2="152" y2="432"/><line x1="304" y1="0" x2="304" y2="432"/>
+          <line x1="456" y1="0" x2="456" y2="432"/>
+        </g>
+        <text x="14" y="30" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Design</text>
+        <text x="14" y="78" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Approvals</text>
+        <text x="14" y="126" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Procurement</text>
+        <text x="14" y="174" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Fabrication</text>
+        <text x="14" y="222" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Delivery</text>
+        <text x="14" y="270" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Installation</text>
+        <text x="14" y="318" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Commissioning</text>
+        <text x="14" y="366" font-family="JetBrains Mono, monospace" font-size="10" style="fill: var(--a-soft);">Handover</text>
+
+        <line id="ddLine" class="rv" x1="210" y1="0" x2="210" y2="432" stroke="#3FB57F" stroke-width="2" stroke-dasharray="5 4"/>
+
+        <rect id="barDesign" class="rv" x="110" y="16" width="25" height="14" rx="2" style="fill: var(--a-acc);"/>
+        <rect id="barAppr" class="rv" x="135" y="64" width="25" height="14" rx="2" style="fill: var(--a-acc);"/>
+        <rect id="barProcA" class="rv" x="160" y="112" width="50" height="14" rx="2" style="fill: var(--a-acc);"/>
+        <rect id="barProcR" class="rv" x="210" y="112" width="90" height="14" rx="2" fill="none" style="stroke: var(--a-acc);" stroke-width="1.5"/>
+        <rect id="barFab" class="rv" x="300" y="160" width="80" height="14" rx="2" fill="#E5604A"/>
+        <rect id="barDeliv" class="rv" x="380" y="208" width="30" height="14" rx="2" fill="#E5604A"/>
+        <rect id="barInst" class="rv" x="410" y="256" width="60" height="14" rx="2" fill="#E5604A"/>
+        <rect id="barComm" class="rv" x="470" y="304" width="40" height="14" rx="2" fill="#E5604A"/>
+        <line id="floatTail" class="rv" x1="510" y1="311" x2="538" y2="311" stroke="#94A3B8" stroke-width="2"/>
+        <path id="diamond" class="rv" d="M 544 349 L 554 359 L 544 369 L 534 359 Z" fill="#E5604A"/>
+        <text id="slipTag" class="rv" x="560" y="338" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="500">+4d</text>
+
+        <g stroke="#E5604A" stroke-width="1.5" fill="none">
+          <path id="linkPF" class="rv clink" d="M 300 119 L 308 119 L 308 167 L 300 167"/>
+          <path id="linkFV" class="rv clink" d="M 380 167 L 388 167 L 388 215 L 380 215"/>
+          <path id="linkVI" class="rv clink" d="M 410 215 L 418 215 L 418 263 L 410 263"/>
+          <path id="linkIC" class="rv clink" d="M 470 263 L 478 263 L 478 311 L 470 311"/>
+          <path id="linkIM" class="rv clink" d="M 510 311 L 544 311 L 544 349"/>
+          <!-- the second edit: Installation goes SS off Fabrication, and the
+               finish link shortens back. Both are the post-edit geometry, so
+               they stay at opacity 0 until act 5 - and in the no-GSAP
+               fallback, where the hero shows the schedule before any edit. -->
+          <path id="linkVIss" d="M 420 215 L 412 215 L 412 263 L 434 263" opacity="0"/>
+          <path id="linkVIff" d="M 450 215 L 458 215 L 458 240 L 494 240 L 494 263" opacity="0"/>
+          <path id="linkIMb" d="M 534 311 L 544 311 L 544 349" opacity="0"/>
+        </g>
+        <path id="linkDA" class="rv" d="M 135 23 L 143 23 L 143 71 L 135 71" stroke-dasharray="3 3" style="stroke: var(--a-firm);" stroke-width="1.2" fill="none"/>
+        <path id="linkAP" class="rv" d="M 160 71 L 168 71 L 168 119 L 160 119" stroke-dasharray="3 3" style="stroke: var(--a-firm);" stroke-width="1.2" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="chat rv" id="chatCard">
+      <div class="head">
+        <svg width="14" height="14" viewBox="0 0 1024 1024" aria-hidden="true">
+          <rect width="1024" height="1024" rx="230" fill="var(--a-acc)"/>
+          <rect x="193.2" y="286.4" width="568.5" height="568.5" rx="185.4" fill="none" stroke="var(--a-paper)" stroke-width="148.3"/>
+          <rect x="761.6" y="286.4" width="143.4" height="630.3" rx="71.7" fill="var(--a-paper)"/>
+          <polygon points="833.3,95 913,174.7 833.3,254.4 753.6,174.7" fill="#E5604A"/>
+        </svg>
+        Ask Aimavera
+        <span class="grow"></span>
+        your key · local ok
+      </div>
+      <div class="msgs" tabindex="0" role="region" aria-label="The assistant demo conversation">
+        <div class="bubble ai rv" id="msgHello">Schedule loaded — 847 activities, critical path through Installation. Ask me anything.</div>
+        <div class="bubble user rv" id="msgUser">push procurement two weeks</div>
+        <div id="dots" class="rv"><i></i><i></i><i></i></div>
+        <div class="bubble ai rv" id="msgReply">Procurement's remaining work +10 working days — actuals stay pinned. 8 activities move and the finish slips 4 days; commissioning's float absorbs the rest.<span class="meta">→ applied as a preview · one undo</span><span class="chipline">The engine validated 3 edits</span></div>
+        <div class="bubble user rv" id="msgUser2">25 Jan is contractual. get it back without touching actuals</div>
+        <div id="dots2" class="rv"><i></i><i></i><i></i></div>
+        <div class="bubble ai rv" id="msgReply2">A pair of edits does it. Installation goes <b>SS +4d</b> off Delivery instead of FS — erection starts as the first skids land rather than waiting for the last, and the crews are independent from grid D on. I have closed it with <b>FF +11d</b>: an SS on its own leaves the successor's finish holding nothing, and the two ends drift. Handover returns to <b>25 Jan</b>; Design keeps 12d float. No actual date moved.<span class="meta">→ applied as a preview · one undo</span><span class="chipline">CPM re-ran · 2 edits validated · 0 rejected</span></div>
+      </div>
+      <div class="inputrow">
+        <div class="inputbox"><span id="typed"></span><span id="caret"></span></div>
+        <span class="send" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#FFFFFF" stroke-width="1.6"><path d="M1 6 L11 6 M7 2 L11 6 L7 10"/></svg>
+        </span>
+      </div>
+    </div>
+</div>
       </article>
 
       <article class="product-panel">
@@ -449,6 +524,9 @@
   </div>
 </footer>
 
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/TextPlugin.min.js" defer></script>
+<script src="assets/aimavera-demo.js?v=2" defer></script>
 <script src="assets/main.js?v=4" defer></script>
 </body>
 </html>
