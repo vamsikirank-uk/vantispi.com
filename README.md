@@ -34,5 +34,5 @@ in GoDaddy. GitHub Pages also works if the repo is made public.
 
 - Swap the mailto contact form for Formspree/Basin (one attribute change).
 - Add /insights/ articles for SEO.
-- Ask scheduleinsight.co.uk, sketchdule.com and runmontecarlo.com to footer-link back here
+- Ask scheduleinsight.com, sketchdule.com and runmontecarlo.com to footer-link back here
   ("A Vantis Project Intelligence product") — the biggest early SEO win.
