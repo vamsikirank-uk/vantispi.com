@@ -477,6 +477,12 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
 .pb-name--sk { font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
 .pb-name--rmc { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.015em; color: var(--ink); }
 .pb-name--rmc span { color: var(--ink-soft); font-weight: 600; }
+.pb-name--aim { font-family: var(--font-body); font-weight: 600; letter-spacing: -0.015em; color: var(--ink); }
+.pb-name--aim b { font-weight: 600; color: #5662e0; }
+[data-theme="dark"] .pb-name--aim b { color: #6e7bff; }
+.pb-name--tid { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.015em; color: var(--ink); }
+.pb-name--tid span { color: var(--ink-soft); font-weight: 600; }
+.pb-mark { border-radius: 6px; }
 
 /* ---------- CTA band ---------- */
 
