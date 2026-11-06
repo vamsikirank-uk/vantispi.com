@@ -9,6 +9,8 @@
   if (tbtn) {
     tbtn.addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      var calm = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (calm) { root.classList.add("theme-anim"); setTimeout(function () { root.classList.remove("theme-anim"); }, 300); }
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("vpi-theme", next); } catch (e) {}
       syncThemeIcon();
@@ -27,6 +29,7 @@
   }
 
   // Scroll reveals + gantt draw-in
+  document.querySelectorAll(".card.reveal").forEach(function (c, i) { c.style.setProperty("--i", i % 4); });
   var observed = document.querySelectorAll(".reveal, .gantt-fig");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(

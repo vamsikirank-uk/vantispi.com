@@ -83,7 +83,7 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
 /* Activity-ID eyebrow — sections are labelled like schedule activities */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -248,7 +248,7 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
 }
 .gantt-fig figcaption {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-faint);
@@ -406,7 +406,7 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
 
 .product-kicker {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--blue);
@@ -438,7 +438,7 @@ h3 { font-size: var(--size-h3); font-weight: 600; }
 }
 .product-media figcaption {
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-faint);
@@ -553,7 +553,7 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
 .site-footer .logo small { color: var(--ink-faint); }
 .site-footer h4 {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -570,7 +570,7 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
   gap: 0.75rem 2rem;
   padding-top: 1.5rem;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
 }
 
@@ -756,22 +756,22 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
 .am-demo .plot,.am-demo .chat{border:1px solid var(--a-rule);border-radius:4px;background:var(--a-paper);box-shadow:0 12px 40px var(--a-shadow);overflow:hidden;color:var(--a-ink);text-align:left}
 .am-demo .plot{display:flex;flex-direction:column}
 .am-demo .plot > svg{display:block;width:100%;height:auto}
-.am-demo .bar-head,.am-demo .chat .head{display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border-bottom:1px solid var(--a-rule);background:var(--a-sunk);font:400 11px/1 var(--a-mono);color:var(--a-soft)}
+.am-demo .bar-head,.am-demo .chat .head{display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border-bottom:1px solid var(--a-rule);background:var(--a-sunk);font:400 12px/1 var(--a-mono);color:var(--a-soft)}
 .am-demo .grow{flex:1}
-.am-demo #revealReplay{background:none;border:1px solid var(--a-firm);border-radius:3px;color:var(--a-soft);font:400 10px/1 var(--a-mono);padding:4px 9px;cursor:pointer}
+.am-demo #revealReplay{background:none;border:1px solid var(--a-firm);border-radius:3px;color:var(--a-soft);font:400 12px/1 var(--a-mono);padding:4px 9px;cursor:pointer}
 .am-demo .chat{display:flex;flex-direction:column}
 .am-demo .msgs{flex:1;display:flex;flex-direction:column;gap:8px;padding:12px;min-height:210px;max-height:296px;overflow-y:auto;scrollbar-width:none}
 .am-demo .msgs::-webkit-scrollbar{display:none}
-.am-demo .bubble{max-width:92%;border-radius:8px;padding:8px 11px;font-size:12px;line-height:1.5}
+.am-demo .bubble{max-width:92%;border-radius:8px;padding:8px 12px;font-size:12px;line-height:1.5}
 .am-demo .bubble.ai{align-self:flex-start;background:var(--a-sunk);color:var(--a-ink);border:1px solid var(--a-rule);border-bottom-left-radius:3px}
 .am-demo .bubble.ai b{color:var(--a-acc);font-weight:600}
-.am-demo .bubble.user{align-self:flex-end;background:var(--a-acc);color:#fff;border-bottom-right-radius:3px;font-family:var(--a-mono);font-size:11.5px}
-.am-demo .bubble .meta{display:block;margin-top:5px;font:400 10px/1.5 var(--a-mono);color:var(--a-green)}
-.am-demo .bubble.ai .chipline{display:inline-block;margin-top:6px;font:500 10px/1 var(--a-mono);color:var(--a-acc);border:1px solid var(--a-firm);border-radius:3px;padding:4px 8px}
-.am-demo #dots,.am-demo #dots2{align-self:flex-start;display:flex;gap:4px;padding:10px 12px;background:var(--a-sunk);border:1px solid var(--a-rule);border-radius:8px;border-bottom-left-radius:3px}
+.am-demo .bubble.user{align-self:flex-end;background:var(--a-acc);color:#fff;border-bottom-right-radius:3px;font-family:var(--a-mono);font-size:12px}
+.am-demo .bubble .meta{display:block;margin-top:5px;font:400 12px/1.5 var(--a-mono);color:var(--a-green)}
+.am-demo .bubble.ai .chipline{display:inline-block;margin-top:6px;font:500 12px/1 var(--a-mono);color:var(--a-acc);border:1px solid var(--a-firm);border-radius:3px;padding:4px 8px}
+.am-demo #dots,.am-demo #dots2{align-self:flex-start;display:flex;gap:4px;padding:12px 12px;background:var(--a-sunk);border:1px solid var(--a-rule);border-radius:8px;border-bottom-left-radius:3px}
 .am-demo #dots i,.am-demo #dots2 i{width:5px;height:5px;border-radius:50%;background:var(--a-soft)}
 .am-demo .inputrow{display:flex;align-items:center;gap:8px;border-top:1px solid var(--a-rule);padding:9px 12px}
-.am-demo .inputbox{flex:1;display:flex;align-items:center;min-height:30px;border:1px solid var(--a-firm);border-radius:3px;padding:5px 9px;font:400 11.5px/1.4 var(--a-mono);color:var(--a-ink);background:var(--a-paper)}
+.am-demo .inputbox{flex:1;display:flex;align-items:center;min-height:30px;border:1px solid var(--a-firm);border-radius:3px;padding:5px 9px;font:400 12px/1.4 var(--a-mono);color:var(--a-ink);background:var(--a-paper)}
 .am-demo #typed{white-space:pre}
 .am-demo #caret{display:inline-block;width:7px;height:13px;margin-left:1px;background:var(--a-acc);animation:am-caret 1s steps(1) infinite}
 @keyframes am-caret{0%,55%{opacity:1}56%,100%{opacity:0}}
@@ -781,3 +781,54 @@ a.product-brand:hover { text-decoration: none; transform: translateY(-1px); }
 .am-demo.gsap .rv{opacity:0}
 @media (prefers-reduced-motion:reduce){.am-demo.gsap .rv{opacity:1!important}}
 @media (max-width:760px){.am-demo .demo2{grid-template-columns:1fr}}
+
+/* ---------- Polish pass: hit targets, press feedback, materials, a11y ---------- */
+
+/* No-JS: never leave below-the-fold content hidden */
+@media (scripting: none) { .reveal { opacity: 1; transform: none; } }
+
+/* Staggered card reveal (index set in main.js) */
+.card.reveal { transition-delay: calc(var(--i, 0) * 60ms); }
+
+/* 44px hit areas without changing layout */
+.site-nav a:not(.btn), .site-footer a, .logo { position: relative; }
+.site-nav a:not(.btn)::after, .site-footer a::after, .product-brand::after {
+  content: ""; position: absolute; inset: -12px -6px;
+}
+.site-footer li, .site-footer a { line-height: 1.4; }
+.theme-toggle, .nav-toggle { min-width: 44px; min-height: 44px; }
+.am-demo #revealReplay { min-height: 28px; position: relative; }
+.am-demo #revealReplay::after { content: ""; position: absolute; inset: -10px; }
+
+/* Instant press feedback (respond on pointer-down) */
+.btn:active, .ptab:active, .theme-toggle:active, .nav-toggle:active {
+  transform: scale(0.97); transition-duration: 80ms;
+}
+
+/* Header: translucent glass layer, edge fade instead of a hard rule */
+.site-header {
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0;
+  box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+/* Eased theme change (no abrupt brightness jump) */
+html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, fill 250ms ease, stroke 250ms ease !important;
+}
+
+/* Accessibility media features */
+@media (prefers-reduced-transparency: reduce) {
+  .site-header, .product-tabs-bar { background: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-contrast: more) {
+  .site-header, .product-tabs-bar { background: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 1px solid var(--ink); box-shadow: none; }
+  .card, .btn, .theme-toggle, .nav-toggle { border-color: var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.theme-anim, html.theme-anim * { transition: none !important; }
+  .btn:active, .ptab:active { transform: none; }
+  .card.reveal { transition-delay: 0ms; }
+}
